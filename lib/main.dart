@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:network_connectivity_check/Controller/dependency_injection.dart';
-import 'package:network_connectivity_check/view/first_screen.dart';
+import 'package:network_connectivity_check/view/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
-  DependencyInjection.init();
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FirstScreen(),
+      home: const HomeScreen(),
     );
   }
 }
