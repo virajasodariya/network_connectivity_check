@@ -14,9 +14,7 @@ class ConnectivityController extends GetxController {
 
   startMonitoring() async {
     await initConnectivity();
-    _connectivity.onConnectivityChanged.listen((
-      ConnectivityResult result,
-    ) async {
+    _connectivity.onConnectivityChanged.listen((ConnectivityResult result) async {
       if (result == ConnectivityResult.none) {
         _isOnline = false;
         update();
